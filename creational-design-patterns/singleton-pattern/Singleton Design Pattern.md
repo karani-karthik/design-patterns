@@ -273,56 +273,6 @@ Therefore:
 
 ---
 
-# ⚠️ Important Interview Points
-
-### 1. Why is Singleton a Creational Pattern?
-
-Because it controls **how an object is created** and ensures that only one instance is created.
-
-### 2. Why is the constructor private?
-
-To prevent other classes from creating objects using:
-
-```java
-new Singleton();
-```
-
-### 3. Why is the instance static?
-
-Because the instance must belong to the **class**, not to an individual object.
-
-### 4. Why is `volatile` required in Double-Checked Locking?
-
-It provides **visibility** between threads and prevents unsafe instruction reordering.
-
-### 5. Is a basic Lazy Singleton thread-safe?
-
-**No.**
-
-```java
-if (instance == null) {
-    instance = new Singleton();
-}
-```
-
-Two threads can execute this code simultaneously and create multiple instances.
-
-### 6. Which Singleton implementation is preferred for lazy initialization?
-
-**Bill Pugh Singleton** is a clean option because it provides lazy initialization and thread safety without explicit synchronization.
-
-### 7. What is the biggest drawback of Singleton?
-
-**Global state and tight coupling**, which can make testing and maintenance difficult.
-
-### 8. What is generally preferred over Singleton in Spring applications?
-
-**Dependency Injection.**
-
-In Spring, beans are Singleton-scoped by default, so you usually don't need to manually implement the Singleton pattern.
-
----
-
 # 💡 Key Takeaway
 
 ```text
