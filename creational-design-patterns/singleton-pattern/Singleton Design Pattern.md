@@ -288,11 +288,3 @@ Global access
    ↓
 Thread safety must be considered
 ```
-
-For Java applications, remember these three implementations:
-
-**Eager → Simple & Thread Safe**
-
-**Double-Checked Locking → Lazy & Thread Safe**
-
-**Bill Pugh → Lazy + Thread Safe + No explicit synchronization**
