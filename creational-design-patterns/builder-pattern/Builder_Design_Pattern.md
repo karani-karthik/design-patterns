@@ -216,56 +216,6 @@ User user = User.builder()
         .build();
 ```
 
-## Important Interview Points
-
-### 1. What problem does Builder Pattern solve?
-
-It solves the problem of **complex constructors**, especially when there
-are many optional parameters.
-
-### 2. What is a Telescoping Constructor?
-
-A series of overloaded constructors with an increasing number of
-parameters used to handle different object configurations.
-
-### 3. Why is the constructor usually private?
-
-To prevent direct object creation and force object creation through the
-Builder.
-
-### 4. Why do builder methods return `this`?
-
-To support **method chaining / fluent API**.
-
-Example:
-
-``` java
-builder
-    .withCheese(true)
-    .withSide("fries")
-    .build();
-```
-
-### 5. Is Director mandatory?
-
-**No.** The Director is optional and is useful when a predefined
-construction process is required.
-
-### 6. Does Builder Pattern guarantee immutability?
-
-**No.** Builder Pattern can be used to create immutable objects, but
-immutability depends on how the Product class is implemented.
-
-### 7. What is the biggest advantage?
-
-It provides **clean and readable object creation** while avoiding
-**telescoping constructors**.
-
-### 8. What is the main disadvantage?
-
-It introduces **additional boilerplate and complexity**, so it can be
-unnecessary for simple objects.
-
 ## Key Takeaway
 
 ``` text
